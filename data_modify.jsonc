@@ -1,0 +1,109 @@
+{
+    "suffix": [
+        {
+            "White-suf": [//add whitelist and remove blacklist
+                "cn"
+            ],
+            "Black-suf": [//add blicklist and remove whitelist
+                // acg
+                "acgnx.net",
+                "acgnx.se",
+                //team
+                "office.net",
+                "office.com",
+                "skype.com",
+                "aka.ms",
+                "lync.com",
+                //wnacg
+                "wzip.download",
+                "wzip.date",
+                "qy0.ru",
+                "wnacg.com",
+                "qy0.ru",
+                //Cloudflare Workers
+                "workers.dev",
+                //AniDB
+                "anidb.net",
+                //AniX.Moe
+                "anix.moe",
+                //colamanga
+                "colamanga.com",
+                //mhgui
+                "mhgui.com",
+                //dmit
+                "dmit.io",
+                //Denpasoft
+                "denpasoft.com",
+                //fanart.tv
+                "fanart.tv",
+                //FastGit
+                "fastgit.org",
+                //jsDelivr
+                "jsdelivr.net",
+                //Miro
+                "miro.com",
+                //ServiceNow
+                "service-now.com",
+                //SmartSheet
+                "smartsheet.com",
+                //UUP dump
+                "uupdump.net",
+                //VCB-S
+                "acgrip.com",
+                //治杰 Online
+                "zhijie.online"
+            ]
+        }
+    ],
+    "Domain": [
+        {
+            "Black-Dom": [//add blicklist and remove whitelist
+                // team
+                "keydelivery.mediaservices.windows.net",
+                "streaming.mediaservices.windows.net",
+                "microsoft.com",
+                "mlccdn.blob.core.windows.net",
+                "users.storage.live.com",
+                "adl.windows.com",
+                "secure.skypeassets.com",
+                "mlccdnprod.azureedge.net"
+            ],
+            "White-Dom": [//add whitelist and remove blacklist
+                //Apple
+                "18-courier.push.apple.com",
+                "amp-api-edge.music.apple.com",
+                "apple-dns.net",
+                "apple.com",
+                "apps.mzstatic.com.mwcname.com",
+                "cl3.apple.com.mwcname.com",
+                "cl5.apple.com.mwcname.com",
+                "client-api.itunes.apple.com.mwcname.com",
+                "gsa.apple.com.akadns.net",
+                "icloud.com",
+                "init-p01md.apple.com",
+                "init-p01md.apple.com.mwcname.com",
+                "init.ess.apple.com",
+                "init.itunes.apple.com",
+                "init.itunes.apple.com.mwcname.com",
+                "iphone-ld.apple.com.mwcname.com",
+                "mesu.apple.com.mwcname.com",
+                "pd.itunes.apple.com.mwcname.com",
+                "play.itunes.apple.com.mwcname.com",
+                "se-edge.itunes-apple.com",
+                "se-edge.itunes.apple.com.mwcname.com",
+                "search.itunes.apple.com.mwcname.com",
+                "www-cdn.icloud.com.akadns.net",
+                "www.icloud.com",
+                "push-apple.com.akadns.net",
+                "apple.com.akadns.net",
+                "courier-push-apple.com.akadns.net",
+                //alidns
+                "dns.alidns.com",
+                //cnbing
+                "cn.bing.com",
+                "cn.bing.net",
+                "www.bing.com"
+            ]
+        }
+    ]
+}
