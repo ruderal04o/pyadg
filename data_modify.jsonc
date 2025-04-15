@@ -2,7 +2,10 @@
     "suffix": [
         {
             "White-suf": [//add whitelist and remove blacklist
-                "cn"
+                "cn",
+                //pfsense
+                "netgate.com",
+                "pfsense.org"
             ],
             "Black-suf": [//add blicklist and remove whitelist
                 // acg
@@ -50,10 +53,7 @@
                 //VCB-S
                 "acgrip.com",
                 //治杰 Online
-                "zhijie.online",
-                //pfsense
-                "netgate.com",
-                "pfsense.org"
+                "zhijie.online"
             ]
         }
     ],
