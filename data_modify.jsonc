@@ -50,7 +50,9 @@
                 //VCB-S
                 "acgrip.com",
                 //治杰 Online
-                "zhijie.online"
+                "zhijie.online",
+                //pfsense
+                "netgate.com"
             ]
         }
     ],
