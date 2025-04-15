@@ -5,7 +5,8 @@
                 "cn",
                 //pfsense
                 "netgate.com",
-                "pfsense.org"
+                "pfsense.org",
+                "rayser.me"
             ],
             "Black-suf": [//add blicklist and remove whitelist
                 // acg
