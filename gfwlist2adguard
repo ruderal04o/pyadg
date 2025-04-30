@@ -200,9 +200,9 @@ def generate_adguardhome_rules(cnacc_data, gfwlist_data, output_dir):
         print("Permission denied. Try running this script with sudo.")
 
 if __name__ == "__main__":
-    temp_path = Path("./Temp")
-    output_path = Path("./gfwlist2adguard")
+    script_dir = Path(__file__).parent.absolute()
+    temp_path = script_dir / "Temp"
+    output_path = script_dir / "gfwlist2adguard"
     get_data(temp_path)
     cnacc, gfwlist = analyse_data(temp_path)
     generate_adguardhome_rules(cnacc, gfwlist, output_path)
-    
