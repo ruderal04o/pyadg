@@ -6,8 +6,7 @@
                 //pfsense
                 "netgate.com",
                 "pfsense.org",
-                "rayser.me",
-                "microsoft.com"
+                "rayser.me"
             ],
             "Black-suf": [//add blicklist and remove whitelist
                 // acg
@@ -106,7 +105,8 @@
                 //cnbing
                 "cn.bing.com",
                 "cn.bing.net",
-                "www.bing.com"
+                "www.bing.com",
+                "microsoft.com"
             ]
         }
     ]
