@@ -65,7 +65,6 @@
                 // team
                 "keydelivery.mediaservices.windows.net",
                 "streaming.mediaservices.windows.net",
-                "microsoft.com",
                 "mlccdn.blob.core.windows.net",
                 "users.storage.live.com",
                 "adl.windows.com",
