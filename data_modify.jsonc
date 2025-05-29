@@ -4,6 +4,9 @@
             "White-suf": [//add whitelist and remove blacklist
                 "cn",
                 "rayser.me"
+                //pfsense
+                "netgate.com",
+                "pfsense.org",
             ],
             "Black-suf": [//add blicklist and remove whitelist
                 // acg
@@ -15,9 +18,6 @@
                 "skype.com",
                 "aka.ms",
                 "lync.com",
-                //pfsense
-                "netgate.com",
-                "pfsense.org",
                 //wnacg
                 "wzip.download",
                 "wzip.date",
