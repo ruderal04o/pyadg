@@ -3,10 +3,10 @@
         {
             "White-suf": [//add whitelist and remove blacklist
                 "cn",
-                "rayser.me"
+                "rayser.me",
                 //pfsense
                 "netgate.com",
-                "pfsense.org",
+                "pfsense.org"
             ],
             "Black-suf": [//add blicklist and remove whitelist
                 // acg
