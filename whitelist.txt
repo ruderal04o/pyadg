@@ -26,6 +26,8 @@ appcenter.ms
 hotmail.com
 dropbox.com
 # apple
+time.apple.com
+mesu.apple.com.w.cdngslb.com
 apple-cloudkit.com
 ioshost.qtlcdn.com
 apple-dns.cn
