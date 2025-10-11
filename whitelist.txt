@@ -9,6 +9,7 @@ visualstudio.com
 msftncsi.com
 windowsupdate.com
 microsoftstore.com.cn
+windows.net
 # apple
 18-courier.push.apple.com
 amp-api-edge.music.apple.com
