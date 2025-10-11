@@ -1,4 +1,5 @@
 # microsoft
+live.com
 msn.cn
 msedge.net
 bing.com
