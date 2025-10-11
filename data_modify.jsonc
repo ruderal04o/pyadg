@@ -69,7 +69,8 @@
                 "users.storage.live.com",
                 "adl.windows.com",
                 "secure.skypeassets.com",
-                "mlccdnprod.azureedge.net"
+                "mlccdnprod.azureedge.net",
+                "live.com",
             ],
             "White-Dom": [//add whitelist and remove blacklist
                 //Apple
