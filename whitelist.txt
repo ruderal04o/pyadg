@@ -61,6 +61,7 @@ s.mzstatic.com
 swallow-apple-com.v.aaplimg.com
 swcdn.g.aaplimg.com
 tj-pod1-smp-device.apple.com
+appledownload.qtlcdn.com
 #synology
 synology.com
 synology.cn
