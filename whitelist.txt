@@ -42,6 +42,7 @@ push-apple.com.akadns.net
 apple.com.akadns.net
 courier-push-apple.com.akadns.net
 apple.com.w.cdngslb.com
+push-apple.com.akadns.net
 #synology
 synology.com
 synology.cn
