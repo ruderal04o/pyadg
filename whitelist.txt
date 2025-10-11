@@ -26,6 +26,9 @@ appcenter.ms
 hotmail.com
 dropbox.com
 # apple
+icloud.com
+icloud-content.com
+idms-apple.com.akadns.net
 time.apple.com
 mesu.apple.com.w.cdngslb.com
 apple-cloudkit.com
