@@ -21,7 +21,10 @@ ntservicepack.microsoft.com
 go.microsoft.com
 dl.delivery.mp.microsoft.com
 microsoftonline.com
+appcenter.ms
+hotmail.com
 # apple
+ioshost.qtlcdn.com
 apple-dns.cn
 apple-dns.net
 apple.com
@@ -64,6 +67,7 @@ swcdn.g.aaplimg.com
 tj-pod1-smp-device.apple.com
 appledownload.qtlcdn.com
 apple-relay.cloudflare.com
+icloud.com.cn
 #synology
 synology.com
 synology.cn
