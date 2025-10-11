@@ -23,7 +23,9 @@ dl.delivery.mp.microsoft.com
 microsoftonline.com
 appcenter.ms
 hotmail.com
+dropbox.com
 # apple
+apple-cloudkit.com
 ioshost.qtlcdn.com
 apple-dns.cn
 apple-dns.net
