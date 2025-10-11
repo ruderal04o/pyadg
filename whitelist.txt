@@ -20,6 +20,7 @@ wustat.windows.com
 ntservicepack.microsoft.com
 go.microsoft.com
 dl.delivery.mp.microsoft.com
+microsoftonline.com
 # apple
 apple-dns.cn
 apple-dns.net
@@ -62,6 +63,7 @@ swallow-apple-com.v.aaplimg.com
 swcdn.g.aaplimg.com
 tj-pod1-smp-device.apple.com
 appledownload.qtlcdn.com
+apple-relay.cloudflare.com
 #synology
 synology.com
 synology.cn
