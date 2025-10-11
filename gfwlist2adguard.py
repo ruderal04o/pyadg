@@ -79,7 +79,7 @@ def get_data(temp_dir):
         "https://raw.githubusercontent.com/ruderal04o/pyadg/refs/heads/main/data_modify.jsonc"
     ]
     white_list = [
-        "https://raw.githubusercontent.com/ruderal04o/GFWList2AGH/refs/heads/source/data/whitelist.txt"
+        "https://raw.githubusercontent.com/ruderal04o/pyadg/refs/heads/main/whitelist.txt"
     ]
 
     if not download_to_file(cnacc_domain, temp_dir / "cnacc_domain.tmp", remove_leading_dot=True):
