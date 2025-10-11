@@ -79,3 +79,6 @@ synology.cn
 #other
 fedex.com
 fedex.com.cn
+#google
+android.l.google.com
+android.clients.google.com
