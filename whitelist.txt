@@ -41,6 +41,7 @@ www.icloud.com
 push-apple.com.akadns.net
 apple.com.akadns.net
 courier-push-apple.com.akadns.net
+apple.com.w.cdngslb.com
 #synology
 synology.com
 synology.cn
