@@ -8,10 +8,12 @@ import shutil
 import tempfile
 import json
 import subprocess
+import sys
 from pathlib import Path
 from collections import defaultdict
 
 def download_to_file(urls, output_file, decode_base64=False, remove_leading_dot=False):
+    success = False
     with open(output_file, 'w', encoding='utf-8') as out:
         for url in urls:
             try:
@@ -22,15 +24,33 @@ def download_to_file(urls, output_file, decode_base64=False, remove_leading_dot=
                 if decode_base64:
                     content = base64.b64decode(content)
                 lines = content.decode('utf-8', errors='ignore').splitlines()
+                
+                # 检查内容是否为空
+                if not lines or all(not line.strip() for line in lines):
+                    print(f"Warning: Empty content from {url}")
+                    continue
+                    
                 for line in lines:
                     if remove_leading_dot:
                         line = line.lstrip('.')
                     out.write(line + '\n')
+                success = True
+                print(f"Successfully downloaded from {url}")
             except Exception as e:
                 print(f"Failed to fetch {url}: {e}")
+    
+    # 检查最终文件是否为空
+    if success and os.path.exists(output_file) and os.path.getsize(output_file) > 0:
+        return True
+    else:
+        print(f"Error: Failed to download any content for {output_file.name}")
+        if os.path.exists(output_file):
+            os.remove(output_file)
+        return False
 
 def get_data(temp_dir):
     temp_dir.mkdir(exist_ok=True)
+    all_success = True
 
     cnacc_domain = [
         "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt",
@@ -58,16 +78,34 @@ def get_data(temp_dir):
     gfwlist2agh_modify = [
         "https://raw.githubusercontent.com/ruderal04o/pyadg/refs/heads/main/data_modify.jsonc"
     ]
+    white_list = [
+        "https://raw.githubusercontent.com/ruderal04o/GFWList2AGH/refs/heads/source/data/whitelist.txt"
+    ]
 
-    download_to_file(cnacc_domain, temp_dir / "cnacc_domain.tmp", remove_leading_dot=True)
-    download_to_file(cnacc_trusted, temp_dir / "cnacc_trusted.tmp")
-    download_to_file(gfwlist_base64, temp_dir / "gfwlist_base64.tmp", decode_base64=True)
-    download_to_file(gfwlist_domain, temp_dir / "gfwlist_domain.tmp", remove_leading_dot=True)
-    download_to_file(gfwlist2agh_modify, temp_dir / "gfwlist2agh_modify.tmp")
+    if not download_to_file(cnacc_domain, temp_dir / "cnacc_domain.tmp", remove_leading_dot=True):
+        all_success = False
+    if not download_to_file(cnacc_trusted, temp_dir / "cnacc_trusted.tmp"):
+        all_success = False
+    if not download_to_file(gfwlist_base64, temp_dir / "gfwlist_base64.tmp", decode_base64=True):
+        all_success = False
+    if not download_to_file(gfwlist_domain, temp_dir / "gfwlist_domain.tmp", remove_leading_dot=True):
+        all_success = False
+    if not download_to_file(gfwlist2agh_modify, temp_dir / "gfwlist2agh_modify.tmp"):
+        all_success = False
+    if not download_to_file(white_list, temp_dir / "white_list.tmp"):
+        all_success = False
 
+    if not all_success:
+        print("Error: Failed to download one or more required files. Exiting.")
+        sys.exit(1)
+        
     print("Data download complete.")
 
 def extract_domains(file_path, regex):
+    if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+        print(f"Error: File {file_path} does not exist or is empty.")
+        return []
+        
     with open(file_path, encoding='utf-8') as f:
         lines = f.readlines()
     
@@ -83,7 +121,8 @@ def extract_domains(file_path, regex):
 
 def load_modify_rules(temp_dir):
     modify_file = temp_dir / "gfwlist2agh_modify.tmp"
-    if not modify_file.exists():
+    if not modify_file.exists() or os.path.getsize(modify_file) == 0:
+        print("Warning: Modify rules file does not exist or is empty.")
         return {"suffix": [], "Domain": []}
     
     with open(modify_file, 'r', encoding='utf-8') as f:
@@ -142,6 +181,16 @@ def analyse_data(temp_dir):
     cnacc_checklist = extract_domains(temp_dir / "cnacc_domain.tmp", domain_regex)
     gfwlist_checklist = extract_domains(temp_dir / "gfwlist_domain.tmp", domain_regex)
     gfwlist_base64_list = extract_domains(temp_dir / "gfwlist_base64.tmp", domain_regex)
+    white_list_domains = extract_domains(temp_dir / "white_list.tmp", domain_regex)
+    
+    # 检查提取的数据是否为空
+    if not cnacc_checklist:
+        print("Error: No CNACC domains extracted.")
+        sys.exit(1)
+    if not gfwlist_checklist and not gfwlist_base64_list:
+        print("Error: No GFWList domains extracted.")
+        sys.exit(1)
+        
     gfwlist_checklist.extend(gfwlist_base64_list)
     gfwlist_checklist = sorted(set(gfwlist_checklist))
 
@@ -156,34 +205,50 @@ def analyse_data(temp_dir):
     modify_rules = load_modify_rules(temp_dir)
     cnacc_data, gfwlist_data = apply_modify_rules(cnacc_data, gfwlist_data, modify_rules)
 
+    # 检查最终数据是否为空
+    if not cnacc_data:
+        print("Error: Final CNACC data is empty.")
+        sys.exit(1)
+    if not gfwlist_data:
+        print("Error: Final GFWList data is empty.")
+        sys.exit(1)
+
     print(f"CNACC domains: {len(cnacc_data)}")
     print(f"GFWList domains: {len(gfwlist_data)}")
+    print(f"White list domains: {len(white_list_domains)}")
 
-    return cnacc_data, gfwlist_data
+    return cnacc_data, gfwlist_data, white_list_domains
 
-def generate_adguardhome_rules(cnacc_data, gfwlist_data, output_dir):
+def generate_adguardhome_rules(cnacc_data, gfwlist_data, white_list_domains, output_dir):
     print("Generating AdGuardHome rules...")
     output_dir.mkdir(exist_ok=True)
 
     domestic_dns = [
-        "127695.alidns.com",
-        "159156.alidns.com"
+        "quic://159156.alidns.com:853",
+        "quic://127695.alidns.com:853"
     ]
     foreign_dns = [
-        "8.8.8.8"
+        "tls://8.8.8.8"
     ]
+    white_list_dns = "127.0.0.1:5353"
     local_dns = "[/home.arpa/]192.168.136.1"
 
     with open(output_dir / "whitelist.txt", 'w', encoding='utf-8') as f:
         for dns in foreign_dns:
             f.write(f"{dns}\n")
         f.write(f"{local_dns}\n")
+        # 添加白名单域名规则，使用127.0.0.1:5353解析
+        if white_list_domains:
+            f.write(f"[/{'/'.join(white_list_domains)}/] {white_list_dns}\n")
         f.write(f"[/{'/'.join(cnacc_data)}/] {' '.join(domestic_dns)}\n")
 
     with open(output_dir / "blacklist.txt", 'w', encoding='utf-8') as f:
         for dns in domestic_dns:
             f.write(f"{dns}\n")
         f.write(f"{local_dns}\n")
+        # 添加白名单域名规则，使用127.0.0.1:5353解析
+        if white_list_domains:
+            f.write(f"[/{'/'.join(white_list_domains)}/] {white_list_dns}\n")
         f.write(f"[/{'/'.join(gfwlist_data)}/] {' '.join(foreign_dns)}\n")
 
     print("Rules generated in:", output_dir)
@@ -203,6 +268,11 @@ if __name__ == "__main__":
     script_dir = Path(__file__).parent.absolute()
     temp_path = script_dir / "Temp"
     output_path = script_dir / "gfwlist2adguard"
-    get_data(temp_path)
-    cnacc, gfwlist = analyse_data(temp_path)
-    generate_adguardhome_rules(cnacc, gfwlist, output_path)
+    
+    try:
+        get_data(temp_path)
+        cnacc, gfwlist, white_list = analyse_data(temp_path)
+        generate_adguardhome_rules(cnacc, gfwlist, white_list, output_path)
+    except Exception as e:
+        print(f"Script execution failed: {e}")
+        sys.exit(1)
