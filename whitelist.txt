@@ -10,6 +10,16 @@ msftncsi.com
 windowsupdate.com
 microsoftstore.com.cn
 windows.net
+# windows update
+windowsupdate.microsoft.com
+update.microsoft.com
+windowsupdate.com
+download.microsoft.com
+download.windowsupdate.com
+wustat.windows.com
+ntservicepack.microsoft.com
+go.microsoft.com
+dl.delivery.mp.microsoft.com
 # apple
 18-courier.push.apple.com
 amp-api-edge.music.apple.com
