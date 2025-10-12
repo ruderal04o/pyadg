@@ -1,1 +1,6 @@
-
+#synology
+synology.com
+synology.cn
+#other
+fedex.com
+fedex.com.cn
