@@ -73,6 +73,7 @@
             ],
             "White-Dom": [//add whitelist and remove blacklist
                 //Apple
+                "time.apple.com",
                 "18-courier.push.apple.com",
                 "amp-api-edge.music.apple.com",
                 "apple-dns.net",
