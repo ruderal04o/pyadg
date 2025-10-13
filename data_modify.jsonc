@@ -1,14 +1,64 @@
 {
     "suffix": [
         {
-            "White-suf": [//add whitelist and remove blacklist
+            "White-suf": [ //add whitelist and remove blacklist
                 "cn",
                 "rayser.me",
                 //pfsense
                 "netgate.com",
-                "pfsense.org"
+                "pfsense.org",
+                //adobe
+                "adobe.com",
+                "adobe.io",
+                "adobe-aemassets-value.com",
+                "adobe-audience-finder.com",
+                "adobe-video-partner-finder.com",
+                "adobe.io",
+                "adobe.ly",
+                "adobeaemcloud.com",
+                "adobeaemcloud.net",
+                "adobeawards.com",
+                "adobecc.com",
+                "adobecce.com",
+                "adobeccstatic.com",
+                "adobecontent.io",
+                "adobecreativityawards.com",
+                "adobedc.net",
+                "adobedemo.com",
+                "adobedtm.com",
+                "adobeereg.com",
+                "adobeexchange.com",
+                "adobeexperienceawards.com",
+                "adobegov.com",
+                "adobehiddentreasures.com",
+                "adobejanus.com",
+                "adobeku.com",
+                "adobelanding.com",
+                "adobelogin.com",
+                "adobeoobe.com",
+                "adobeplatinumclub.com",
+                "adobepress.ch",
+                "adobeprojectm.com",
+                "adobesign.com",
+                "adobesigncdn.com",
+                "adobespark.com",
+                "adobess.com",
+                "adobestats.io",
+                "adobestock.com",
+                "adobetag.com",
+                "adobetarget.com",
+                "adobetcstrialdvd.com",
+                "adobetechcomm.com",
+                "adobetechcommcallback.com",
+                "adobetechcommdemo.com",
+                "adobexdplatform.com",
+                "enablementadobe.com",
+                "practivate.adobe",
+                "practivate.adobe.ipp",
+                "practivate.adobe.newoa",
+                "practivate.adobe.ntp"
             ],
-            "Black-suf": [//add blicklist and remove whitelist
+            "Black-suf": [ //add blicklist and remove whitelist
                 // acg
                 "acgnx.net",
                 "acgnx.se",
@@ -61,7 +111,7 @@
     ],
     "Domain": [
         {
-            "Black-Dom": [//add blicklist and remove whitelist
+            "Black-Dom": [ //add blicklist and remove whitelist
                 // team
                 "keydelivery.mediaservices.windows.net",
                 "streaming.mediaservices.windows.net",
@@ -71,7 +121,7 @@
                 "secure.skypeassets.com",
                 "mlccdnprod.azureedge.net"
             ],
-            "White-Dom": [//add whitelist and remove blacklist
+            "White-Dom": [ //add whitelist and remove blacklist
                 //Apple
                 "time.apple.com",
                 "18-courier.push.apple.com",
