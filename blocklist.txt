@@ -1,3 +1,5 @@
+#microsoft
+#adobe
 adobe.com
 adobe.io
 assetsadobe.com
