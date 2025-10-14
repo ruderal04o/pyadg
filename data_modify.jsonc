@@ -56,7 +56,13 @@
                 "practivate.adobe",
                 "practivate.adobe.ipp",
                 "practivate.adobe.newoa",
-                "practivate.adobe.ntp"
+                "practivate.adobe.ntp",
+                //synology
+                "synology.cn",
+                "synology.com",
+                "synology.me",
+                "synologydownload.com",
+                "synologyupdate.com"
             ],
             "Black-suf": [ //add blicklist and remove whitelist
                 // acg
