@@ -45,8 +45,8 @@ appledownload.qtlcdn.com
 apple-relay.cloudflare.com
 icloud.com.cn
 #synology
-synology.com
-synology.cn
+#synology.com
+#synology.cn
 #other
 fedex.com
 fedex.com.cn
