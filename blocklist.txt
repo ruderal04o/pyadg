@@ -95,8 +95,8 @@ subscribe.insight.synology.com
 #httpsDNS
 dns.jd.com
 dns.weibo.cn
-dns.weixin.qq.com
-dns.weixin.qq.com.cn
+#dns.weixin.qq.com
+#dns.weixin.qq.com.cn
 httpdns-api.aliyuncs.com
 httpdns-sc.aliyuncs.com
 httpdns.alicdn.com
@@ -116,7 +116,7 @@ httpsdns.baidu.com
 lofter.httpdns.c.163.com
 music.httpdns.c.163.com
 httpdns.pro
-aedns.weixin.qq.com
+#aedns.weixin.qq.com
 #weixin
 #szlong.weixin.qq.com
 #szextshort.weixin.qq.com
