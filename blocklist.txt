@@ -90,3 +90,5 @@ data.ie.sogou.com
 vinci.ie.sogou.com
 config.push.sogou.com
 4399sy.com
+#syno
+subscribe.insight.synology.com
