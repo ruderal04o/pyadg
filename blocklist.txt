@@ -121,4 +121,3 @@ aedns.weixin.qq.com
 szlong.weixin.qq.com
 szextshort.weixin.qq.com
 autonavi.com.gds.alibabadns.com
-sched.legopic2-dk.tdnsv6.com
