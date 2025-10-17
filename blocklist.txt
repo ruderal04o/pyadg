@@ -117,3 +117,6 @@ lofter.httpdns.c.163.com
 music.httpdns.c.163.com
 httpdns.pro
 aedns.weixin.qq.com
+#weixin
+szlong.weixin.qq.com
+szextshort.weixin.qq.com
