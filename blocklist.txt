@@ -118,6 +118,6 @@ music.httpdns.c.163.com
 httpdns.pro
 aedns.weixin.qq.com
 #weixin
-szlong.weixin.qq.com
-szextshort.weixin.qq.com
+#szlong.weixin.qq.com
+#szextshort.weixin.qq.com
 autonavi.com.gds.alibabadns.com
