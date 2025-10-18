@@ -116,6 +116,7 @@ httpsdns.baidu.com
 lofter.httpdns.c.163.com
 music.httpdns.c.163.com
 httpdns.pro
+httpdns.meituan.com
 #aedns.weixin.qq.com
 #weixin
 #szlong.weixin.qq.com
