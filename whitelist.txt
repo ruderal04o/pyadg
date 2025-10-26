@@ -62,3 +62,6 @@ wustat.windows.com
 ntservicepack.microsoft.com
 go.microsoft.com
 delivery.mp.microsoft.com
+wns.windows.com
+lon.llnw.net
+lcy.llnw.net
