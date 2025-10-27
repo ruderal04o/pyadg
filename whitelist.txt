@@ -65,3 +65,4 @@ delivery.mp.microsoft.com
 wns.windows.com
 lon.llnw.net
 lcy.llnw.net
+subscribe.insight.synology.com
