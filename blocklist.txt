@@ -91,7 +91,7 @@ vinci.ie.sogou.com
 config.push.sogou.com
 4399sy.com
 #syno
-subscribe.insight.synology.com
+#subscribe.insight.synology.com
 #httpsDNS
 dns.jd.com
 dns.weibo.cn
