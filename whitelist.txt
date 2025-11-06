@@ -63,6 +63,7 @@ android.clients.google.com
 #go.microsoft.com
 #delivery.mp.microsoft.com
 #wns.windows.com
+msn.cn
 windows.com
 microsoft.com
 windowsupdate.com
