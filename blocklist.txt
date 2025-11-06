@@ -123,3 +123,5 @@ httpdns.meituan.com
 #szextshort.weixin.qq.com
 autonavi.com.gds.alibabadns.com
 tplinkcloud.com.cn
+mozilla.cloudflare-dns.com
+dns.google.com
