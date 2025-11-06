@@ -125,3 +125,4 @@ autonavi.com.gds.alibabadns.com
 tplinkcloud.com.cn
 mozilla.cloudflare-dns.com
 dns.google.com
+dns.google
