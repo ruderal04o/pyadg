@@ -72,6 +72,7 @@ msftconnecttest.com
 microsoftonline.com
 msftauth.net
 msauth.net
+gfx.ms
 live.com
 office365.com
 office.com
