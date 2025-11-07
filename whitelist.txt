@@ -69,6 +69,10 @@ microsoft.com
 windowsupdate.com
 msftncsi.com
 msftconnecttest.com
+microsoftonline.com
+msftauth.net
+msauth.net
+live.com
 office365.com
 office.com
 msn.cn
