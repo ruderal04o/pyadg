@@ -81,3 +81,4 @@ msn.cn
 lon.llnw.net
 lcy.llnw.net
 subscribe.insight.synology.com
+digicert.com
