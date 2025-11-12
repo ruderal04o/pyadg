@@ -83,4 +83,3 @@ lcy.llnw.net
 subscribe.insight.synology.com
 digicert.com
 assets.adobedtm.com
-apple.com.download.ks-cdn.com
