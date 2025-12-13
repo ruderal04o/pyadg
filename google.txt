@@ -1,6 +1,3 @@
-
-
-
 # Google Corp aka ÜberProxy domains
 # Other corp related domain
 265.com
