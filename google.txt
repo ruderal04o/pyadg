@@ -36,8 +36,6 @@ crl.pki.goog
 csi.gstatic.com
 dartsearch-cn.net
 dg-meta.video.google.com
-dl.google.com
-dl.l.google.com
 doubleclick-cn.net
 doubleclick.net
 download.mlcc.google.com
