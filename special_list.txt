@@ -2,5 +2,3 @@ wzip.date
 wzip.download
 wnacg.com
 qy0.ru
-gold-usergeneratedcontent.net
-hitomi.la
