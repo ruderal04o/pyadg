@@ -161,13 +161,7 @@
                 "apple.com.akadns.net",
                 "courier-push-apple.com.akadns.net",
                 //alidns
-                "dns.alidns.com",
-                //cnbing
-                "cn.bing.com",
-                "cn.bing.net",
-                "www.bing.com",
-                "microsoft.com",
-                "live.com"
+                "dns.alidns.com"
             ]
         }
     ]
