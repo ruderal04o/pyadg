@@ -45,8 +45,6 @@ onedrive.net
 onedrive.co.uk
 onedrive.com
 skydrive.com
-visualstudio.net
-visualstudio.com
 microsoftsqlserver.com
 hotmail.net
 hotmail.co.uk
