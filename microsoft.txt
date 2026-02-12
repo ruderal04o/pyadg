@@ -627,3 +627,7 @@ msbill.info
 microsoftmerchandise.com
 microsoftrnd.co.il
 static.microsoft
+visualstudio.net
+visualstudio.com
+vscode-cdn.net
+vscode.dev
