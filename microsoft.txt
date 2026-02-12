@@ -6,7 +6,6 @@ activision.com
 powerapps.com
 akamaized.net
 nelreports.net
-vscode-cdn.net
 docs.com
 msft.com
 s-msft.com
@@ -20,7 +19,6 @@ bethesda.net
 clipchamp.com
 linkedin.com
 powershellgallery.com
-vscode.dev
 appcenter.ms
 msecn.net
 a-msedge.net
