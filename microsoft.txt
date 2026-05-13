@@ -88,8 +88,6 @@ seaofthieves.com
 skype.com
 azure.com
 bing.com
-live.com
-microsoftonline.com
 microsoft.com
 msn.com
 office.com
